@@ -210,8 +210,8 @@ class MultithreadingDemo2 extends Thread {
     			
     			WebDriver driver = new FirefoxDriver(options); //Creating an object of FirefoxDriver
     					driver.manage().deleteAllCookies();
-    					driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-    					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    					driver.manage().timeouts().pageLoadTimeout(80, TimeUnit.SECONDS);
+    					driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     					
     				
     			//for span tag
@@ -244,7 +244,7 @@ class MultithreadingDemo2 extends Thread {
     			  	WebElement r = driver.findElement(By.name("q"));
 
     			  	//enter this tutorials in search box
-    			  	r.sendKeys("gamerware gta 6 set in miami");
+    			  	r.sendKeys("gamerware soulstice pc rtx");
     			  	r.sendKeys(Keys.RETURN);
     			  	//wait for suggestions
     			  	
@@ -259,7 +259,7 @@ class MultithreadingDemo2 extends Thread {
     			  	
     			  	for(WebElement ele : elems) {
     			  		String val = ele.getText();
-    			  		if(val != null && (val.equalsIgnoreCase("GTA 6 Gameplay Footage of Lucia Vice City ( Grand Theft ...") || val.contains("GTA 6 Gameplay Footage of Lucia Vice City"))) {
+    			  		if(val != null && (val.equalsIgnoreCase("SOULSTICE PC (2022) RTX Walkthrough Gameplay - Part 1") || val.contains("SOULSTICE PC (2022) RTX Walkthrough Gameplay - Part 1"))) {
     			  			isFound = true;
     			  			ele.click();
     			  			break;
@@ -273,7 +273,7 @@ class MultithreadingDemo2 extends Thread {
     			  	
     			  	for(WebElement ele : elems2) {
     			  		String val = ele.getText();
-    			  		if(val != null && val.contains("GTA 6 Gameplay Footage of Lucia Vice City")) {
+    			  		if(val != null && val.contains("SOULSTICE PC (2022) RTX Walkthrough Gameplay - Part 1 ...")) {
     			  			ele.click();
     			  			break;
     			  		}
